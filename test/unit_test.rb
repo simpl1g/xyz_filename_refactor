@@ -2,8 +2,6 @@ require 'test/unit'
 require '../app/target'
 require '../app/xyzservice'
 
-#:xyz_category_prefix, :kind, :age, :personal, :id, :title, :publish_on
-
 class TestAdd < Test::Unit::TestCase
   def test
     targ = Array.new
@@ -15,6 +13,8 @@ class TestAdd < Test::Unit::TestCase
     targ.each do |target|
       new = escape_random(XYZService.xyz_filename_new(target))
       old = escape_random(XYZService.xyz_filename_old(target))
+      puts new
+      puts old
       assert_equal new, old
     end
   end
