@@ -1,6 +1,7 @@
 class Target
   attr_accessor :xyz_category_prefix, :kind, :age, :personal, :id, :title, :publish_on
 
+  # WTF?
   def initialize(*arg)
     @xyz_category_prefix=""
     @kind=""
